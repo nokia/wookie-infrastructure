@@ -1,0 +1,6 @@
+[submodule "states"]
+	path = states
+	url = git@github.com:elyast/saltstack-formulas.git
+[submodule "trampie"]
+	path = trampie
+	url = git@github.com:elyast/trampie.git

@@ -1,1 +1,14 @@
 logs/
+virtualbox
+.rvmrc
+.tmp
+*.dpkg-dist
+*.sublime-workspace
+*.log
+action_provision
+vendor
+.bundle
+*.pyc
+.idea
+.DS_Store
+
