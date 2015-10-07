@@ -1,4 +1,4 @@
-default-master[3]:
+default-master-[3]:
   provider: vbox_wifi
   memory: 4096
   cpus: 1
