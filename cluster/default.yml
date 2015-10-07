@@ -1,15 +1,21 @@
-default-master:
+default-master[3]:
   provider: vbox_wifi
   memory: 4096
   cpus: 1
   minion:
-    master: default-master
+    master: default-master-1
   grains:
     roles:
-      - postgresql
+      - system
       - zookeeper.server
       - mesos.master
       - mesos.slave
+      - hdfs.journalnode
+      - hdfs.namenode
+      - mesos.dns
+      - mesos.trigger_services
+      - hdfs.datanode
+      - spark
   synced_folders:
     ./states: /srv/states
     ./pillar: /srv/pillar
