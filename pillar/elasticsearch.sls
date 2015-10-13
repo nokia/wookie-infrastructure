@@ -8,7 +8,7 @@ elasticsearch-mesos:
   java_opts: -Xms128m -Xmx256m
   container:
     docker:
-      image: mesos/elasticsearch-scheduler:0.2.1
+      image: mesos/elasticsearch-scheduler
       network: HOST
   healthChecks:
     -  gracePeriodSeconds: 120

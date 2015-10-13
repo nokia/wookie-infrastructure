@@ -1,5 +1,5 @@
 zeppelin:
-  url: http://as-master/deps/
+  url: salt://oss
   tarball: zeppelin-0.6.0-incubating-SNAPSHOT.tar.gz
   dirname: zeppelin-0.6.0-incubating-SNAPSHOT
   checksum: md5=4dfcb08816d6e01fea4a0a683143ef6d

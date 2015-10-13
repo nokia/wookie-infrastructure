@@ -7,15 +7,21 @@ default-master:
   grains:
     roles:
       - system
+      - salt.master
       - zookeeper.server
       - mesos.master
       - mesos.slave
+      - mesos.service_trigger
+      - mesos.dns
       - hdfs.journalnode
       - hdfs.namenode
-      - mesos.dns
-      - mesos.trigger_services
       - hdfs.datanode
+      - marathon
+      - postgresql
       - spark
+      - haproxy
+    attributes:
+      nameservice: abs
   synced_folders:
     ./states: /srv/states
     ./pillar: /srv/pillar

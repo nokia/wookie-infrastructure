@@ -7,4 +7,4 @@ zookeeper:
   port: 2181
   home: /usr/lib/zookeeper
   conf: /etc/zookeeper/conf
-  version: 3.4.5+cdh5.4.4+91-1.cdh5.4.4.p0.6~trusty-cdh5.4.4
+  version: 3.4.5+cdh5.4.7+96-1.cdh5.4.7.p0.3~trusty-cdh5.4.7

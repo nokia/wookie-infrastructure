@@ -1,5 +1,5 @@
 tachyon:
-  url: http://as-master/deps/
+  url: salt://oss
   checksum: md5=f1dfeeab1df035b3ec7a917563554658
   tarball: tachyon-0.6.4.tar.gz
   dirname: tachyon-0.6.4

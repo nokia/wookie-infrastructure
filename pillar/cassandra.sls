@@ -13,10 +13,10 @@ cassandra-mesos:
     CASSANDRA_HEALTH_CHECK_INTERVAL_SECONDS: "60"
     CASSANDRA_ZK_TIMEOUT_MS: "10000"
   uris:
-    - http://as-master/deps/cassandra-mesos-executor.jar
-    - http://as-master/deps/cassandra-mesos-framework.jar
-    - https://downloads.mesosphere.io/java/jre-7u76-linux-x64.tar.gz
-    - https://downloads.mesosphere.io/cassandra-mesos/cassandra/apache-cassandra-2.1.4-bin.tar.gz
+    - salt://oss/cassandra-mesos-executor.jar
+    - salt://oss/cassandra-mesos-framework.jar
+    - salt://oss/jre-7u76-linux-x64.tar.gz
+    - salt://oss/apache-cassandra-2.1.4-bin.tar.gz
   healthChecks:
     -  gracePeriodSeconds: 120
        intervalSeconds: 30
@@ -35,7 +35,7 @@ cassandra-mesos:
   instances: 1
 
 cassandra:
-  url: http://as-master/deps
+  url: salt://oss
   checksum: md5=e1b1036f6db64fb0c8c51799c05d4349
   tarball: apache-cassandra-2.1.4-bin.tar.gz
   dirname: apache-cassandra-2.1.4

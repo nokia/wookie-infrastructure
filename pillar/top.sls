@@ -13,6 +13,7 @@ base:
     - kafka
     - elasticsearch
     - ignite
+    - chronos
   {% for role in grain_roles -%}
   {% set role_prefix=role.split('.')[0] -%}
   'roles:{{ role }}':

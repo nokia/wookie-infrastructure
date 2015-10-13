@@ -6,8 +6,10 @@ empty_state:
 
 events:
   - 'salt/netapi/hook/marathon/events':
-      - salt://reactor/sync_services.sls
+      - salt://haproxy/kick_service.sls
+      - salt://riemann/kick_service.sls
 
 java:
   version: 8
   flavor: oracle
+  share_dir: /usr/share/java

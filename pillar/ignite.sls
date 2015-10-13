@@ -7,7 +7,7 @@ ignite-mesos:
     IGNITE_RUN_CPU_PER_NODE: "2"
     IGNITE_MEMORY_PER_NODE: "2048"
   uris:
-    - http://as-master/deps/ignite-mesos-1.3.0-incubating-jar-with-dependencies.jar
+    - salt://oss/ignite-mesos-1.3.0-incubating-jar-with-dependencies.jar
   healthChecks:
     -  portIndex: 0
        protocol: TCP

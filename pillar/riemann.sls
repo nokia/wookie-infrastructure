@@ -1,5 +1,5 @@
 riemann:
-  url: http://as-master/deps/
+  url: salt://oss
   checksum: md5=78f44060f75dca711dd50d143fb36de2
   tarball: riemann-0.2.9.tar.bz2
   dirname: riemann-0.2.9
@@ -9,9 +9,9 @@ riemann:
   hadoop.version: 0.1.1
   postgresql.version: 0.1.1
   dash.port: 2421
-  jmx_url: http://as-master/deps/riemann-jmx-clj-0.1.1-SNAPSHOT-standalone.jar
+  jmx_url: salt://oss/riemann-jmx-clj-0.1.1-SNAPSHOT-standalone.jar
   jmx_checksum: md5=3c9cbbd7c000110438fab6621d22230c
-  extra_url: http://as-master/deps/riemann-extra-0.2.6-standalone.jar
+  extra_url: salt://oss/riemann-extra-0.2.6-standalone.jar
   extra_checksum: md5=d20d4beceaec3ed9fb5c56d461f5bde4
   user: riemann
   group: riemann

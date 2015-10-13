@@ -4,20 +4,20 @@ cloudera:
 cloudera_cdh5:
   {% if grains['os'].lower() == 'ubuntu' -%}
   {% if grains['oscodename'].lower() == 'trusty' -%}
-  repository: deb [arch=amd64] http://archive.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh trusty-cdh5.4.4 contrib
-  repository_src: deb-src http://archive.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh trusty-cdh5.4.4 contrib
+  repository: deb [arch=amd64] http://archive.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh trusty-cdh5.4.7 contrib
+  repository_src: deb-src http://archive.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh trusty-cdh5.4.7 contrib
   repository_key_url: http://archive.cloudera.com/cdh5/ubuntu/trusty/amd64/cdh/archive.key
   gplextras_repository: deb [arch=amd64] http://archive.cloudera.com/gplextras5/ubuntu/trusty/amd64/gplextras trusty-gplextras5 contrib
   gplextras_repository_src: deb-src http://archive.cloudera.com/gplextras5/ubuntu/trusty/amd64/gplextras trusty-gplextras5 contrib
   {% elif grains['oscodename'].lower() == 'raring' -%}
-  repository: deb [arch=amd64] http://archive.cloudera.com/cdh5/ubuntu/raring/amd64/cdh raring-cdh5.4.4 contrib
-  repository_src: deb-src http://archive.cloudera.com/cdh5/ubuntu/raring/amd64/cdh raring-cdh5.4.4 contrib
+  repository: deb [arch=amd64] http://archive.cloudera.com/cdh5/ubuntu/raring/amd64/cdh raring-cdh5.4.7 contrib
+  repository_src: deb-src http://archive.cloudera.com/cdh5/ubuntu/raring/amd64/cdh raring-cdh5.4.7 contrib
   repository_key_url: http://archive.cloudera.com/cdh5/ubuntu/raring/amd64/cdh/archive.key
   gplextras_repository: deb [arch=amd64] http://archive.cloudera.com/gplextras5/ubuntu/raring/amd64/gplextras raring-gplextras5 contrib
   gplextras_repository_src: deb-src http://archive.cloudera.com/gplextras5/ubuntu/raring/amd64/gplextras raring-gplextras5 contrib
   {% elif grains['oscodename'].lower() == 'precise' -%}
-  repository: deb [arch=amd64] http://archive.cloudera.com/cdh5/ubuntu/precise/amd64/cdh precise-cdh5.4.4 contrib
-  repository_src: deb-src http://archive.cloudera.com/cdh5/ubuntu/precise/amd64/cdh precise-cdh5.4.4 contrib
+  repository: deb [arch=amd64] http://archive.cloudera.com/cdh5/ubuntu/precise/amd64/cdh precise-cdh5.4.7 contrib
+  repository_src: deb-src http://archive.cloudera.com/cdh5/ubuntu/precise/amd64/cdh precise-cdh5.4.7 contrib
   repository_key_url: http://archive.cloudera.com/cdh5/ubuntu/precise/amd64/cdh/archive.key
   gplextras_repository: deb [arch=amd64] http://archive.cloudera.com/gplextras5/ubuntu/precise/amd64/gplextras precise-gplextras5 contrib
   gplextras_repository_src: deb-src http://archive.cloudera.com/gplextras5/ubuntu/precise/amd64/gplextras precise-gplextras5 contrib
@@ -43,3 +43,4 @@ hdfs:
   namenode.port: 8020
   home: /usr/lib/hadoop
   conf: /etc/hadoop/conf
+  pkgs_path: /pkgs
