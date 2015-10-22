@@ -10,6 +10,6 @@ events:
       - salt://riemann/kick_service.sls
 
 java:
-  version: 8
+  version: 7
   flavor: oracle
   share_dir: /usr/share/java
