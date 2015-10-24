@@ -22,6 +22,9 @@ default-master:
       - haproxy
     attributes:
       nameservice: abs
+  forwarded_ports:
+    "2414": 2414
+    "2413": 2413
   synced_folders:
     ./states: /srv/states
     ./pillar: /srv/pillar

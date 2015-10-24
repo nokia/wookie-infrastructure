@@ -3,6 +3,8 @@ haproxy:
   stats.port: 2413
   stats.username: admin
   stats.password: admin
+  cert_server: salt://oss/server.pem
+  cert_ca: salt://oss/ca.crt
   {% if grains['os'].lower() == 'ubuntu' -%}
   {% if grains['oscodename'].lower() == 'trusty' -%}
   repository: deb http://ppa.launchpad.net/vbernat/haproxy-1.5/ubuntu trusty main
@@ -27,6 +29,7 @@ schedule:
 haproxy_apps:
   .*:
     - mode: http
+    - ssl: True
   ignite-mesos: []
   roles:
     - service_port: 2408
@@ -38,3 +41,4 @@ haproxy_apps:
       httpchk: HEAD /
       query: roles:marathon
       name: marathon
+      ssl: True
