@@ -31,6 +31,10 @@ haproxy_apps:
     - mode: http
       server_cert_on: True
   ignite-mesos: []
+  zeppelin:
+    - mode: http
+      client_cert_on: True
+      service_port: 2999
   roles:
     - service_port: 2408
       port: 8001
@@ -43,5 +47,4 @@ haproxy_apps:
       httpchk: HEAD /
       query: roles:marathon
       name: marathon
-      server_cert_on: True
       client_cert_on: True

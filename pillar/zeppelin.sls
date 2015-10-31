@@ -8,7 +8,8 @@ zeppelin:
   instances: 1
   port: 2901
   mem: 1024
-  ports: [2901, 2902]
+  ports: [2944]
+  requirePorts: True
   upgradeStrategy:
     minimumHealthCapacity: 1
   constraints: [['hostname', 'UNIQUE']]
