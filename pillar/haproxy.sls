@@ -34,7 +34,6 @@ haproxy_apps:
   zeppelin:
     - mode: http
       client_cert_on: True
-      service_port: 2999
   roles:
     - service_port: 2408
       port: 8001
