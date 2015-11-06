@@ -20,6 +20,7 @@ default-master:
       - postgresql
       - spark
       - haproxy
+      - riemann.server
     attributes:
       nameservice: abs
   forwarded_ports:

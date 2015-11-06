@@ -1,20 +1,21 @@
 riemann:
   url: salt://oss
-  checksum: md5=78f44060f75dca711dd50d143fb36de2
-  tarball: riemann-0.2.9.tar.bz2
-  dirname: riemann-0.2.9
-  tools.version: 0.2.5
+  checksum: md5=c15e245a0658b9f1fe56137f523af59a
+  tarball: riemann-0.2.10.tar.bz2
+  dirname: riemann-0.2.10
+  tools.version: 0.2.7
   dash.version: 0.2.11
   client.version: 0.2.5
   hadoop.version: 0.1.1
   postgresql.version: 0.1.1
-  dash.port: 2421
-  jmx_url: salt://oss/riemann-jmx-clj-0.1.1-SNAPSHOT-standalone.jar
-  jmx_checksum: md5=3c9cbbd7c000110438fab6621d22230c
-  extra_url: salt://oss/riemann-extra-0.2.6-standalone.jar
-  extra_checksum: md5=d20d4beceaec3ed9fb5c56d461f5bde4
+  json_http.version: 0.1.5
+  jmx_url: salt://oss/riemann-jmx-clj-0.1.0-SNAPSHOT-standalone.jar
+  jmx_checksum: md5=915a5a9365ec86848691ab922b59c218
+  extra_url: salt://oss/riemann-extra-0.2.4-standalone.jar
+  extra_checksum: md5=ad9396c5cd62c0396e48fe311798d737
   user: riemann
   group: riemann
+  dash.port: 2421
   server.port: 2422
   ws.port: 2423
   repl.port: 2424
@@ -78,7 +79,7 @@ riemann_checks:
     spark.*:
       endpoint: /metrics/json
   jmx:
-    cassandra_server:
+    cassandra-mesos:
       - obj: "org.apache.cassandra.metrics:type=DroppedMessage,scope=READ,name=Dropped"
         attr: [ Count ]
       - obj: "org.apache.cassandra.metrics:type=DroppedMessage,scope=MUTATION,name=Dropped"
@@ -105,7 +106,7 @@ riemann_checks:
         attr: [ Count ]
       - obj: "org.apache.cassandra.metrics:type=Storage,name=Exceptions"
         attr: [ Count ]
-    kafka_server:
+    kafka-mesos:
       - obj: "kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec"
         attr: [ Count, OneMinuteRate, FiveMinuteRate, FifteenMinuteRate, MeanRate ]
       - obj: "kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec"

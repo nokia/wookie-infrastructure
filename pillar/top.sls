@@ -1,6 +1,3 @@
-
-{% if 'roles' in grains -%}
-{% set grain_roles = grains['roles'] -%}
 base:
   '*':
     - global
@@ -15,10 +12,14 @@ base:
     - ignite
     - chronos
     - zeppelin
-  {% for role in grain_roles -%}
-  {% set role_prefix=role.split('.')[0] -%}
-  'roles:{{ role }}':
+    - postgresql
+    - spark
+    - hdfs
+    - mesos
+    - tachyon
+  'roles:salt.master':
     - match: grain
-    - {{ role_prefix }}
-  {% endfor %}
-{% endif %}
+    - salt
+  'roles:haproxy':
+    - match: grain
+    - haproxy
