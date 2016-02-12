@@ -5,14 +5,11 @@ spark:
   dirname: spark-1.5.1-bin-dist
   executor.memory: 2g
   serializer: org.apache.spark.serializer.KryoSerializer
-  mesos.coarse: "false"
-  job.memory: 2g
   tachyonStore.baseDir: /cache
   eventlog.dir: /spark-events
   max.dynamic.partitions: 10000
   dynamic.partition: "true"
   dynamic.partition.mode: nonstrict
-  mesos.mesosExecutor.cores: 0.1
   hive.username: hive
   hive.password: hive
   sample: 'true'
